@@ -1,0 +1,337 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    /*min-height: 100vh;
+    background-image: linear-gradient(-45deg, #F9AE2C 50%, #36221c 50%);
+    font-family: 'Raleway', sans-serif;*/
+    min-height: 100vh;
+    background: rgb(67,169,235);
+    background: linear-gradient(0deg, rgba(67,169,235,1) 0%, rgba(0,0,0,1) 100%);
+}
+ 
+.titulo {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 40px;
+    color: #2C98F9; 
+}
+
+.subtitle{
+    margin: 0;
+    color: #000;
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sabor { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+
+/*
+    estilos de materialize
+
+*/
+.carousel{
+    min-height: 500px;
+}
+.carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 500px;
+    height: 500px;
+}
+
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.carousel .indicators .indicator-item{
+    border-radius: 5;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background: #36221c;
+}
+
+.inside{
+    z-index: 8;
+    background: #0781b6;
+    width: 58px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 0px 60px 0px 200px;
+    transition: all 0.5s, border-radius 2s, top 1s;
+    overflow: hidden;
+    
+}
+.inside .icon{
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    color: white;
+    opacity: 1;
+}
+
+.inside:hover{
+    width: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    height: 80%;
+}
+
+.inside:hover .icon{
+    opacity: 0;
+    right: 15px;
+    top: 15px;
+}
+
+.inside:hover .contents{
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+}
+.inside .contents{
+    padding: 5%;
+    opacity: 0;
+    transform: scale(0.5);
+    transform: translateY(-200%);
+    transition: opacity 0.2s,transform 0.8s;
+}
+
+.inside .contents h1,
+.inside .contents p{
+    color: white;
+}
+
+
+.inside .contents p{
+    font-size: 19px;
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    .carousel{
+        min-height: 400px ;
+    }
+
+    .carousel .carousel-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        width: 250px;
+        height: 400px;
+    }
+    .carousel .carousel-item img{
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        position:absolute;
+        top: 0;
+        left: 13px;
+        z-index: -1;
+        border-radius: 15px;
+    }
+    .subtitle{
+        margin: 1;
+        color: #000;
+        display: inline;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .sabor { 
+        color: #fff;
+        margin: 7px 0;
+        font-size: 20px;
+        font-weight: 300;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+        font-family: 'Dancing Script', cursive;
+        margin-top: 0;
+    }
+    .linea-division {
+        width: 70%;
+        height: 2px;
+        background-color: #36221c;
+    }
+
+    .inside{
+        z-index: 8;
+        background: #0781b6;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        top: 0px;
+        right: 12px;
+        border-radius: 0px 79px 0px 200px;
+        transition: all 0.5s, border-radius 2s, top 1s;
+        overflow: hidden;
+    }
+    .inside .icon{
+        position: absolute;
+        right: 7px;
+        top: 3px;
+        color: white;
+        opacity: 1;
+    }
+    .inside .contents h1{
+        font-size: 3.2rem;
+        line-height: 110%;
+        margin: 1rem 0 1rem 0;
+    }
+    .inside .contents p{
+        font-size: 13px;
+    }
+
+
+    .inside:hover{
+        width: 90%;
+        right: 12px;
+        top: 0;
+        border-radius: 13px 13px 0px 0px;
+        height: 80%;
+    }
+    
+    .inside:hover .icon{
+        opacity: 0;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .inside:hover .contents{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
+    }
+    .inside .contents{
+        padding: 5%;
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translateY(-200%);
+        transition: opacity 0.2s,transform 0.8s;
+    }
+}
+
+@media (max-width:400px){
+    .carousel{
+        min-height: 300px ;
+    }
+
+    .titulo {
+        font-size: 35px;
+        font-family: 'Dancing Script', cursive;
+        margin-bottom: -4px;
+        color: #2C98F9; 
+    }
+    
+
+    .carousel .carousel-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        width: 200px;
+        height: 300px;
+    }
+    .carousel .carousel-item img{
+        width: 79%;
+        height: 100%;
+        object-fit: cover;
+        position:absolute;
+        top: 0px;
+        left: 22px;
+        z-index: -1;
+        border-radius: 15px;
+    }
+    .subtitle{
+        margin: 1;
+        color: #000;
+        display: inline;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .sabor { 
+        color: #fff;
+        margin: 5px 0;
+        font-size: 20px;
+        font-weight: 300;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+        font-family: 'Dancing Script', cursive;
+        margin-top: 0;
+    }
+    .linea-division {
+        width: 50%;
+        height: 2px;
+        background-color: #36221c;
+    }
+    .inside{
+        z-index: 8;
+        background: #0781b6;
+        width: 40px;
+        height: 35px;
+        position: absolute;
+        top: 0px;
+        right: 19px;
+        border-radius: 0px 79px 0px 200px;
+        transition: all 0.5s, border-radius 2s, top 1s;
+        overflow: hidden;
+    }
+    .inside:hover{
+        width: 79%;
+        right: 20px;
+        top: 0;
+        border-radius: 13px 13px 0px 0px;
+        height: 80%;
+    }
+    .inside .icon{
+        position: absolute;
+        right: 7px;
+        top: 3px;
+        color: white;
+        opacity: 1;
+    }
+
+    .inside .contents h1{
+        font-size: 2.2rem;
+        line-height: 110%;
+        margin: 1rem 0 1rem 0;
+    }
+    .inside .contents p{
+        font-size: 10px;
+    }
+}
